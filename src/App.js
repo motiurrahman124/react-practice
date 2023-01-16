@@ -1,4 +1,4 @@
-
+import Clock from './components/Clock';
 // function App() {
 //   return (
 //     <h1 className="heading">
@@ -18,8 +18,13 @@ function App() {
       <Welcome name="Cahal" />
       <Welcome name="Edite" />
       <Welcome name="Hary" />
+      <Clock/>
     </div>
   );
 }
+
+
+
+
 
 export default App;
