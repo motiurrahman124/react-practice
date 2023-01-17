@@ -10,7 +10,7 @@ class Clock extends React.Component{
     // }
 
     // otherwise we will use
-    state ={ date: new Date()};
+    state ={ date: new Date(), locale: 'bn-BD'};
 
     componentDidMount(){
         this.clockTimer = setInterval(()=> {this.tick()},1000);
@@ -25,18 +25,45 @@ class Clock extends React.Component{
             date: new Date()
         });
     }
-    handleClick(){
-        console.log('the button was clicked');
+    // handleClick(e){
+    //     e.preventDefault();
+    //     console.log('the button was clicked');
+    // }
+    
+    // handleClick = () => {
+    //     this.setState({
+    //         locale: 'en-us',
+    //     });
+    // }
+
+    handleClick = (locale) =>{
+        this.setState({
+            locale
+        });
     }
 
     render(){
-        const { date } = this.state;
+        const { date, locale } = this.state;
+        
+        // if(locale === 'bn-BD'){
+        //     button = <button onClick={()=>this.handleClick( 'en-US')}>Click Me</button>
+        // } else {
+        //     button = <button onClick={()=>this.handleClick( 'bn-BD')}>Click Me</button>
+        // }
         return(
             <div>
                 <h1 className="heading">
-                    <span className="text">{date.toLocaleTimeString('bn-bd')}</span>
+                    <span className="text">{date.toLocaleTimeString(locale)}</span>
                 </h1>
-                <button onClick={this.handleClick}>Click Me</button>
+                {/* <button onClick={this.handleClick}>Click Me</button> */}
+                {/* <button onClick={this.handleClick.bind(this, 'en-US')}>Click Me</button> */}
+                {/* {button} */}
+                { locale==='bn-BD'? <button onClick={()=>this.handleClick( 'en-US')} >Ghori Change Korun</button>: <button onClick={()=>this.handleClick( 'bn-BD')} >Change Clock</button>
+                }
+
+                
+                
+                
             </div>
             
         );

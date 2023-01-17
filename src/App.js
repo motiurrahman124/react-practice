@@ -1,4 +1,5 @@
-import Clock from './components/Clock';
+import ClockList from './components/ClockList';
+import Form from './components/Form';
 // function App() {
 //   return (
 //     <h1 className="heading">
@@ -12,13 +13,15 @@ function Welcome(props) {
 }
 
 function App() {
+  const quantities = [1, 2, 3];
   return (
     <div>
       <Welcome name="Sara" />
       <Welcome name="Cahal" />
       <Welcome name="Edite" />
       <Welcome name="Hary" />
-      <Clock/>
+      <ClockList quantities={quantities}/>
+      <Form/>
     </div>
   );
 }
