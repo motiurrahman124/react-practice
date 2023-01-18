@@ -1,6 +1,9 @@
-import ClockList from './components/ClockList';
-import Form from './components/Form';
 import Calculator from './components/Calculator';
+import ClockList from './components/ClockList';
+import Bracket from './components/composition/Bracket';
+import Emoji from './components/composition/Emoji';
+import Text from './components/composition/Text';
+import Form from './components/Form';
 // function App() {
 //   return (
 //     <h1 className="heading">
@@ -24,6 +27,16 @@ function App() {
       <ClockList quantities={quantities}/>
       <Form/>
       <Calculator/>
+      {/* <Emoji>
+        {({addEmoji})=><Text addEmoji={addEmoji}/>}
+      </Emoji> */}
+      <Emoji>
+            {({ addEmoji }) => (
+                <Bracket>
+                    {({ addBracket }) => <Text addEmoji={addEmoji} addBracket={addBracket} />}
+                </Bracket>
+            )}
+        </Emoji>
     </div>
   );
 }
