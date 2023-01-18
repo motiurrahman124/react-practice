@@ -1,9 +1,9 @@
-export function toCelcius(farenheit){
+export function toCelsius(farenheit){
     return ((farenheit - 32)*5)/9;
 }
 
-export function toFarenheit(celcius){
-    return ((celcius*9)/5)+32;
+export function toFarenheit(celsius){
+    return ((celsius*9)/5)+32;
 }
 
 export function convert(temperature, convertTo){
