@@ -2,6 +2,7 @@ import Calculator from './components/Calculator';
 import ClickCounter from './components/ClickCounter';
 import HoverCounter from './components/HoverCounter';
 import User from './components/User';
+import Todo from './components/Todo';
 import ClockList from './components/ClockList';
 import Bracket from './components/composition/Bracket';
 import Emoji from './components/composition/Emoji';
@@ -43,7 +44,7 @@ function App() {
       <ClickCounter/><br />
       <HoverCounter/><br />
       <User name={(isLoggedIn) => (isLoggedIn ? 'Motiur': 'Guest')}/>
-
+      <Todo/>
 
     </div>
   );
