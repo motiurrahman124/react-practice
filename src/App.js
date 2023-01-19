@@ -4,15 +4,17 @@ import ClockList from "./components/ClockList";
 import Bracket from "./components/composition/Bracket";
 import Emoji from "./components/composition/Emoji";
 import Text from "./components/composition/Text";
-import Tutorial from "./components/Tutorial";
 import Form from "./components/Form";
 import HoverCounter from "./components/HoverCounter";
 import Logo from "./components/Logo";
 import Todo from "./components/Todo";
+import Tutorial from "./components/Tutorial";
 import User from "./components/User";
 
 //link with external css file
 import "./assets/css/global.css";
+import './assets/css/dark.css';
+
 // function App() {
 //   return (
 //     <h1 className="heading">
