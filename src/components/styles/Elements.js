@@ -9,3 +9,15 @@ export const Tag = styled.span`
   border-radius: 50px;
   font-size: 0.7em;
 `;
+
+export const H1 = styled.h1`
+  color: #fff;
+`;
+
+export const P = styled.p`
+  width: 280px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #aaa;
+  margin: 20px 0;
+`;
