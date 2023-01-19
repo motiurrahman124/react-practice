@@ -4,7 +4,7 @@ import { CardContainer, ContentContainer, ButtonContainer } from "./styles/Conta
 // import Content from "./Content";
 import Image from "./Image";
 // import Tag from "./Tag";
-import { Tag, H1, P } from "./styles/Elements";
+import { Tag, H1, P} from "./styles/Elements";
 
 export default function Card() {
     return(
