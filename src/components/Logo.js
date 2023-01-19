@@ -5,7 +5,10 @@ export default function Logo() {
     const [glassColor, setGlassColor] = useState('black');
     //pic color randomly
     const pickColorRandomly = () =>{
-        const colors = ["red", "green", "yellow", "orange"];
+        const colors = ["red", "green", "yellow", "orange", "pink", "blue"];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+
+        return color;
     }
   return (
     <div className={styles.logo}>
@@ -55,7 +58,7 @@ export default function Logo() {
                 transform="translate(15.45 63.11) rotate(-44.95)"
               />
               <path
-                // style={[ fill: glassColor ]}
+                style={{  fill: glassColor  }}
                 d="M102,18.8H99.65a21.34,21.34,0,0,0-42.31-.5c-1.16.25-5.65.5-5.65.5s-4.23-.22-5.4-.45A21.34,21.34,0,0,0,4,18.8H1.65A1.65,1.65,0,0,0,0,20.45v1.79a1.65,1.65,0,0,0,1.65,1.65H4a21.34,21.34,0,0,0,42.32.47c1.19-.24,5.4-.47,5.4-.47s4.47.26,5.66.52a21.34,21.34,0,0,0,42.3-.52H102a1.65,1.65,0,0,0,1.65-1.65V20.45A1.65,1.65,0,0,0,102,18.8ZM25.16,37.6A16.26,16.26,0,1,1,41.42,21.34,16.26,16.26,0,0,1,25.16,37.6Zm53.31,0A16.26,16.26,0,1,1,94.72,21.34,16.26,16.26,0,0,1,78.47,37.6Z"
               />
             </g>
@@ -64,8 +67,8 @@ export default function Logo() {
       </div>
 
       <div className={styles.play}>
-        <button type="button">Colorize Glass</button>
-        <button type="button">Reset Glass</button>
+        <button type="button" onClick={()=> setGlassColor(pickColorRandomly())}>Colorize Glass</button>
+        <button type="button" onClick={()=> setGlassColor('black')}>Reset Glass</button>
       </div>
     </div>
   );
