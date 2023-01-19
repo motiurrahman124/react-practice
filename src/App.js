@@ -4,6 +4,7 @@ import ClockList from "./components/ClockList";
 import Bracket from "./components/composition/Bracket";
 import Emoji from "./components/composition/Emoji";
 import Text from "./components/composition/Text";
+import Tutorial from "./components/Tutorial";
 import Form from "./components/Form";
 import HoverCounter from "./components/HoverCounter";
 import Logo from "./components/Logo";
@@ -61,6 +62,8 @@ function App() {
         <h1>Css Styles Practice</h1>
         <Logo/>
       </div>
+      <br /><br />
+      <Tutorial/>
     </>
   );
 }
