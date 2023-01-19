@@ -64,7 +64,6 @@ function App() {
         <h1>Css Styles Practice</h1>
         <Logo/>
       </div>
-      <br /><br />
       <Tutorial/>
     </>
   );
